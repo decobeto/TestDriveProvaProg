@@ -1,0 +1,15 @@
+﻿html {
+    padding: 60px;
+}
+
+.caixa {
+    border: 1px solid black;
+}
+
+strong{
+    font-size: 20px;
+}
+
+div {
+   margin-bottom: 20px;
+}

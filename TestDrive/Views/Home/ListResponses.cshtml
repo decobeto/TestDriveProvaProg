@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TestDrive.Models.TesteDrive>
+@{
+   Layout = null;
+}
+    <!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Lista</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/listresponse.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        <h1>Clientes Atendidos e Testes Drives Feitos</h1>
+
+        @foreach (TestDrive.Models.TesteDrive r in Model)
+        {
+            <div class="caixa">
+                <strong>Cadastro TestDrive:</strong>
+                <p>Nome Vendedor:  @r.NameVendedor</p>
+                <p>Marca Carro:  @r.MarcaCarro</p>
+                <p>Modelo Carro: @r.ModeloCarro</p> 
+                <p>Data teste Drive:  @r.DataTestDrive</p>
+                <hr />
+               <strong>Cadastro Cliente:</strong>
+               <p>Nome Cliente:  @r.NameCliente</p>
+               <p>Email: @r.Email</p>  
+               <p>Data Nascimento: @r.DataNascimentoCliente</p>  
+               <p>Renda Familiar: @r.RendaFamiliar</p> 
+               <p>Bairro:  @r.Bairro</p> 
+               <p>Rua:  @r.Rua</p> 
+               <p>Nro: @r.Nro</p>  
+               <p>Cidade:  @r.Cidade</p>  
+               <p>UF: @r.Uf</p> 
+               
+            </div>
+        }
+
+        <hr />
+        <a asp-action="Index" class="btn btn-success">Voltar ao Início</a>
+    </body>
+    </html>
